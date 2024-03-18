@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "logo header header"
+    "logo form form"
+    "logo create create";
+    height: 100vh;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+header {
+    grid-area: header;
+    padding: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: .7;
+    padding-top: 100px;
+}
+
+main {
+    grid-area: form;
+    background-color: #7dd3fc;
+    padding: 20px;
+    font-weight: bold;
+    
+}
+form {
+    display: grid;
+    grid-template-areas: 
+    "first-name last-name"
+    "email phone-number"
+    "password confirm-password";
+    grid-template-columns: 1fr 3fr;
+}
+.first-name {
+    grid-area: first-name;
+}
+.last-name {
+    grid-area: last-name;
+}
+.email {
+    grid-area: email;
+}
+.phone {
+    grid-area: phone-number;
+}
+.password {
+    grid-area: password;
+}
+.confirm-pwd {
+    grid-area: confirm-password;
+}
+
+aside {
+    grid-area: logo;
+    background-image: url(./viking_skull_warrior_vector_illustration.jpg);
+    background-size: cover;
+    background-position: center;
+}
+figure {
+    display: flex;
+    height: 20%;
+    margin-top: 150px;
+    justify-content: center;
+    background-color: rgba(14, 165, 233, .6);
+}
+figure figcaption {
+    align-self: center;
+    font-family: 'Norse', sans-serif;
+    font-weight: bolder;
+    font-size: 100px;
+    color: white;
+}
+
+
+footer {
+    grid-area: create;
+    padding: 20px;
+}
+/* form {
+    display: flex;
+    flex-direction: column;
+} */
+
+form  input {
+    height: 30px;
+    border: solid 2px #94a3b8;
+    border-radius: .5rem;
+    padding-left: 10px;
+}
+form > div {
+    padding-bottom: 20px;
+}
+
+/* inside footer */
+.create {
+    padding: 10px 15px;
+    width: auto;
+    background-color: #38bdf8;
+    border-radius: 5px;
+    border-style: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.create:hover {
+    cursor: pointer;
+}
+.required {
+    color: #dc2626;
+}
